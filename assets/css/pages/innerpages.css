@@ -346,7 +346,7 @@ Version: 1.0
 .menu-item .bistly-product-item {
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 100%;
 }
 
 .menu-item .product-info {
@@ -356,7 +356,7 @@ Version: 1.0
 }
 
 .menu-item .product-info .theme1-btn {
-    margin-top: auto;
+    margin-top: 20px;
 }
 /* Menu button End */
 
