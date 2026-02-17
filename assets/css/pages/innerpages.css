@@ -343,24 +343,30 @@ Version: 1.0
 }
 
 /* Menu button */
-.menu-item {
-    display: flex;
+/* บังคับความสูงของชื่อสินค้าให้เท่ากัน (ประมาณ 2 บรรทัด) */
+.bistly-product-item .product-info h4 {
+    height: 50px; /* ปรับค่านี้ตามความเหมาะสม */
+    overflow: hidden; /* ซ่อนส่วนที่เกิน (กรณีชื่อยาวมาก) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* จำกัดให้แสดงได้สูงสุด 2 บรรทัด */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* เพิ่ม ... ต่อท้ายถ้าชื่อยาวเกิน */
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่างชื่อหน่อย */
 }
 
-.bistly-product-item {
+/* จัดให้กล่อง product-info มีความสูงยืดหยุ่นและดันปุ่มไปข้างล่างสุด */
+.bistly-product-item .product-info {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: space-between;
+    height: 100%; /* ให้กล่องสูงเต็มพื้นที่ */
+    min-height: 160px; /* กำหนดความสูงขั้นต่ำ (ปรับตามความเหมาะสม) */
 }
 
-.product-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.product-info .theme1-btn {
-    margin-top: auto;
+/* จัดให้ปุ่ม Pre-Order อยู่ตรงกลางและชิดขอบล่าง */
+.bistly-product-item .product-info .theme1-btn {
+    margin-top: auto; /* ดันปุ่มลงไปข้างล่างสุด */
+    align-self: center; /* จัดให้อยู่ตรงกลางแนวนอน */
 }
 /* Menu button End */
 
