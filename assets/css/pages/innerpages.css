@@ -343,20 +343,24 @@ Version: 1.0
 }
 
 /* Menu button */
-.menu-item .bistly-product-item {
+.menu-item {
     display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
-.menu-item .product-info {
+.bistly-product-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.menu-item .product-info .theme1-btn {
-    margin-top: 20px;
+.product-info .theme1-btn {
+    margin-top: auto;
 }
 /* Menu button End */
 
