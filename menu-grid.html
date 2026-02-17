@@ -90,24 +90,41 @@ document.addEventListener("DOMContentLoaded", function () {
            เมื่อ radio ตัวไหนถูก checked ให้ไปสั่ง .menu-item ที่เป็นพี่น้องตามหลังมา */
 
         /* กรณีเลือก All: แสดงทุกอัน */
-        #filter-all:checked ~ .menu-grid .menu-item { display: block; animation: fadeIn 0.5s; }
+        #filter-all:checked ~ .menu-grid .menu-item { display: block; animation: customFadeUp 0.6s ease-out forwards; }
 
         /* กรณีเลือก Cake: ซ่อนทั้งหมดก่อน แล้วแสดงเฉพาะ .category-cake */
         #filter-cake:checked ~ .menu-grid .menu-item { display: none; }
-        #filter-cake:checked ~ .menu-grid .menu-item.category-cake { display: block; animation: fadeIn 0.5s; }
+        #filter-cake:checked ~ .menu-grid .menu-item.category-cake { display: block; animation: customFadeUp 0.6s ease-out forwards; }
 
         /* กรณีเลือก Cookies */
         #filter-cookies:checked ~ .menu-grid .menu-item { display: none; }
-        #filter-cookies:checked ~ .menu-grid .menu-item.category-cookies { display: block; animation: fadeIn 0.5s; }
+        #filter-cookies:checked ~ .menu-grid .menu-item.category-cookies { display: block; animation: customFadeUp 0.6s ease-out forwards; }
 
         /* กรณีเลือก Tart */
         #filter-tart:checked ~ .menu-grid .menu-item { display: none; }
-        #filter-tart:checked ~ .menu-grid .menu-item.category-tart { display: block; animation: fadeIn 0.5s; }
+        #filter-tart:checked ~ .menu-grid .menu-item.category-tart { display: block; animation: customFadeUp 0.6s ease-out forwards; }
 
         /* กรณีเลือก flavours */
         #filter-flavours:checked ~ .menu-grid .menu-item { display: none; }
-        #filter-flavours:checked ~ .menu-grid .menu-item.category-flavours { display: block; animation: fadeIn 0.5s; }
+        #filter-flavours:checked ~ .menu-grid .menu-item.category-flavours { display: block; animation: customFadeUp 0.6s ease-out forwards; }
+    /* อัปเดตบรรทัดของ All, Cake, Cookies, Tart ให้ใช้ customFadeUp ด้วย */
+        #filter-all:checked ~ .menu-grid .menu-item { display: block; animation: customFadeUp 0.6s ease-out forwards; }
+        #filter-cake:checked ~ .menu-grid .menu-item.category-cake { display: block; animation: customFadeUp 0.6s ease-out forwards; }
+        #filter-cookies:checked ~ .menu-grid .menu-item.category-cookies { display: block; animation: customFadeUp 0.6s ease-out forwards; }
+        #filter-tart:checked ~ .menu-grid .menu-item.category-tart { display: block; animation: customFadeUp 0.6s ease-out forwards; }
 
+
+        /* สร้าง Animation ใหม่ ให้เหมือน AOS Fade Up */
+        @keyframes customFadeUp { 
+            0% { 
+                opacity: 0; 
+                transform: translateY(50px); /* เริ่มต้น: เลื่อนลงไปข้างล่าง 50px */
+            } 
+            100% { 
+                opacity: 1; 
+                transform: translateY(0);    /* สิ้นสุด: กลับมาที่เดิม */
+            } 
+        }
 
         /* CSS สำหรับปุ่มกด (เปลี่ยนสีเมื่อถูกเลือก) 
            แก้ไข: เพิ่ม .row ข้างหน้า เพื่อให้เจาะเข้าไปหาปุ่มใน Grid ได้ */
