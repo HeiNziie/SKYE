@@ -345,7 +345,7 @@ Version: 1.0
 /* Menu button */
 /* บังคับความสูงของชื่อสินค้าให้เท่ากัน (ประมาณ 2 บรรทัด) */
 .bistly-product-item .product-info h4 {
-    height: 70px; /* ปรับค่านี้ตามความเหมาะสม */
+    height: 10px; /* ปรับค่านี้ตามความเหมาะสม */
     overflow: hidden; /* ซ่อนส่วนที่เกิน (กรณีชื่อยาวมาก) */
     display: -webkit-box;
     -webkit-line-clamp: 2; /* จำกัดให้แสดงได้สูงสุด 2 บรรทัด */
