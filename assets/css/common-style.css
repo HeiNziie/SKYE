@@ -23,6 +23,7 @@
 
 ----*/
 /* Base CSS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600&display=swap');
 :root {
   --primary-color: #231f20;
   --heading-color: #43442d;
