@@ -24,6 +24,12 @@
 ----*/
 /* Base CSS */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url('https://fonts.gstatic.com/s/notosansthai/v20/iJWnBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcd1MKVQt_So_9CdU5RtpzF-QRvzzXg.woff2') format('woff2');
+  unicode-range: U+0E00-U+0E7F; /* ช่วง Unicode ภาษาไทยทั้งหมด */
+}
 :root {
   --primary-color: #231f20;
   --heading-color: #43442d;
@@ -35,7 +41,7 @@
   --border-color: #E9E9E9;
   --rating-color: #FF9F1A;
   --heading-font: "Marcellus", serif;
-  --body-font: "Roboto", sans-serif;
+  --body-font: "Noto Sans Thai", "Roboto", sans-serif;
 }
 
 html {
