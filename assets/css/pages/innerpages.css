@@ -345,13 +345,13 @@ Version: 1.0
 /* Menu button */
 /* บังคับความสูงของชื่อสินค้าให้เท่ากัน (ประมาณ 2 บรรทัด) */
 .bistly-product-item .product-info h4 {
-    height: 70px; /* ปรับค่านี้ตามความเหมาะสม */
-    overflow: hidden; /* ซ่อนส่วนที่เกิน (กรณีชื่อยาวมาก) */
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* จำกัดให้แสดงได้สูงสุด 2 บรรทัด */
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis; /* เพิ่ม ... ต่อท้ายถ้าชื่อยาวเกิน */
-    margin-bottom: 5px; /* เพิ่มระยะห่างด้านล่างชื่อหน่อย */
+  min-height: 70px;       /* เปลี่ยน height → min-height */
+  height: auto;           /* ให้ขยายได้ตามเนื้อหา */
+  overflow: visible;      /* ไม่ซ่อนอีกแล้ว */
+  display: block;         /* ยกเลิก line-clamp */
+  -webkit-line-clamp: unset;
+  text-overflow: clip;
+  margin-bottom: 5px;
 }
 
 /* จัดให้กล่อง product-info มีความสูงยืดหยุ่นและดันปุ่มไปข้างล่างสุด */
